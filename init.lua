@@ -1,7 +1,22 @@
 local set = vim.o
-set.numebr = true
-set.relativenumber = true
+
+-- 行号
+-- set.relativenumber = true
+set.number = true
+
+-- 剪切板共享
 set.clipboard = "unnamed"
+
+--缩进
+set.tabstop = 4
+set.shiftwidth = 4
+set.expandtab = true
+set.autoindent = true
+set.wrap = false
+set.cursorline = true
+
+-- 外观
+
 
 -- keybindings
 local opt = { noremap = true, silent = true}
@@ -27,9 +42,9 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   })
 end
-
 vim.opt.rtp:prepend(lazypath)
 
+-- lazy 插件安装
 require("lazy").setup({
 	{ 'RRethy/nvim-base16', lazy = true},
 	{
@@ -38,6 +53,7 @@ require("lazy").setup({
 	}
 })
 
+-- colorscheme 主题配置
 require('base16-colorscheme').setup({
      base00 = '#16161D', base01 = '#2c313c', base02 = '#3e4451', base03 = '#6c7891',
      base04 = '#565c64', base05 = '#abb2bf', base06 = '#9a9bb3', base07 = '#c5c8e6',
@@ -45,5 +61,10 @@ require('base16-colorscheme').setup({
      base0C = '#56b6c2', base0D = '#0184bc', base0E = '#c678dd', base0F = '#a06949',
 })
 
-
+-- telescope 全局检索与缓冲区插件
+local builtin = require('telescope.builtin')
+vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
+vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
 
