@@ -27,19 +27,15 @@ require("lazy").setup({
     },
     {
         'neovim/nvim-lspconfig',
-        lazy = true
     },
     {
         "williamboman/mason.nvim",
-        lazy = true
     },
     {
         "williamboman/mason-lspconfig.nvim",
-        lazy = true
     },
     {
         "simrat39/rust-tools.nvim",
-        lazy = true
     },
     -- 自动补全插件
     { "hrsh7th/nvim-cmp" },
@@ -50,7 +46,7 @@ require("lazy").setup({
     { "hrsh7th/cmp-cmdline" },
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/cmp-vsnip" },
-    { "hrsh7th/vim-vsnip" },
+    { "hrsh7th/vim-vsnip" }
 })
 
 -- colorscheme 主题插件配置
