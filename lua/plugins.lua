@@ -49,6 +49,13 @@ require("lazy").setup({
         event = {"CmdlineEnter"},
         ft = {'go', 'gomod'},
     },
+    { 
+        "windwp/nvim-autopairs",
+         config = function() 
+             require("nvim-autopairs").setup({})
+         end
+
+    },
     -- 自动补全插件
     { "hrsh7th/nvim-cmp" },
     { "hrsh7th/cmp-nvim-lsp" },
@@ -58,7 +65,7 @@ require("lazy").setup({
     { "hrsh7th/cmp-cmdline" },
     { "hrsh7th/cmp-buffer" },
     { "hrsh7th/cmp-vsnip" },
-    { "hrsh7th/vim-vsnip" }
+    { "hrsh7th/vim-vsnip" },
 })
 
 -- colorscheme 主题插件配置
