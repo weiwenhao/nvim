@@ -2,6 +2,15 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+
+-- 自定义文件类型
+vim.filetype.add({
+  extension = {
+    n = 'nature',
+  },
+})
+
+
 require('plugins')
 require('options')
 require('keymaps')
