@@ -12,6 +12,13 @@ vim.opt.expandtab = true
 vim.opt.autoindent = true
 vim.opt.wrap = false
 
+-- 折叠
+vim.opt.foldenable = false
+vim.wo.foldmethod = 'indent'
+vim.wo.foldnestmax = 10
+vim.wo.foldlevel = 9
+
+
 -- insert 模式下光标是一个竖线
 vim.opt.cursorline = true
 
