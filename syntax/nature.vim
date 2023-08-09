@@ -5,7 +5,7 @@ if exists("b:current_syntax")
 endif
 
 syn keyword natureCommentTodo TODO FIXME XXX TBD contained
-syn keyword natureKeyword var try struct type fn import in as return is throw union let gen
+syn keyword natureKeyword var try struct type fn import in as return is throw union let gen continue break
 syn keyword natureType int uint u8 i8 u16 i16 u32 i32 u64 i64 float f64 f32 bool string any null
 syn region natureSingleString start=+'+ skip=+\\\\\|\\'+ end=+'+ contains=@Spell
 syn region natureDoubleString start=+"+ skip=+\\\\\|\\"+ end=+"+ contains=@Spell
